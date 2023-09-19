@@ -1,0 +1,168 @@
+.popular	
+	padding-top: 80px
+	padding-bottom: 100px
+	background-color: rgba(253, 253, 253, 1)
+	&__title        
+		font-size: 24px
+		font-weight: 400         
+		text-align: center
+		color: $highlighting-in-yellow
+		span
+			margin-top: 8px                   
+			font-size: 32px
+			font-weight: 800                              
+			text-align: center
+			color: rgba(24, 18, 30, 1)
+	&__wrapper		
+		position: relative
+		margin-top: 50px
+		display: grid
+		grid-template-columns: repeat(3,auto)
+		grid-auto-columns: auto
+		column-gap: 20px
+		transform: translateZ(0)
+		// backface-visibility: hidden		
+		// white-space: nowrap
+		overflow-x: auto		
+		&_item			
+			width: 380px
+			height: 500px
+			position: relative
+			display: grid
+			grid-template-columns: 100%
+			grid-template-rows: repeat(2,auto) 90px
+			grid-auto-rows: auto
+			border-radius: 32px
+			&:hover
+				background: rgba(255,255,255,.2)				
+				-webkit-backdrop-filter: blur(3px)
+				backdrop-filter: blur(5px)
+				grid-template-rows: 115px minmax(216px,auto) 90px
+				gap: 0
+				// border-radius: 32px				
+				.price
+					grid-row: 1/2					
+					padding: 30px 32px
+					border-radius: 32px 32px 0 0						
+				.dscr
+					display: block
+					grid-row: 2/3
+					background: rgba(255,255,255,.2)
+					-webkit-backdrop-filter: blur(3px)
+					backdrop-filter: blur(5px)
+					text-overflow: ellipsis
+					white-space: pre-wrap
+					overflow: overlay					
+				.hover_btn
+					width: 100%					
+					display: block
+					grid-row: 3/4
+					// padding-left: 32px
+					background: rgba(255,255,255,.2)
+					-webkit-backdrop-filter: blur(3px)
+					backdrop-filter: blur(5px)	
+					border-radius: 0 0 32px 32px
+					.price__btn
+						margin-left: 32px			
+				.popular
+					&__wrapper
+						&_star
+							display: none
+			.price				
+				grid-row: 3/4				
+				display: grid
+				grid-template-columns: 1fr auto
+				grid-template-rows: auto
+				column-gap: 35px				
+				align-items: center					
+				border-radius: 0 0 32px 32px
+				background: rgba(255,255,255,.2)
+				-webkit-backdrop-filter: blur(3px)
+				backdrop-filter: blur(5px)
+				padding: 20px 32px
+				
+				&__title
+					display: grid
+					grid-template-rows: repeat(2,auto)
+					gap: 0
+					color: #fdfdfd
+					font-size: 24px
+					font-weight: 700										
+					span
+						color: #fdfdfd
+						font-size: 14px
+						font-weight: 400						
+				&__price
+					padding: 8px 16px										
+					color: #fdfdfd
+					font-size: 20px
+					font-weight: 700						
+					border-radius: 4px
+					background: rgba(255,255,255,.3)
+			.hover_btn
+				display: none
+				grid-row: 2/3								
+			.dscr
+				display: none				
+				padding: 0 32px
+				grid-row: 1/2				
+				color: #fdfdfd
+				font-size: 16px
+				font-weight: 400
+				line-height: 1.5
+				text-overflow: ellipsis
+				
+				
+									
+		&_star			
+			display: flex
+			align-items: center
+			font-size: 14px
+			font-weight: 700
+			position: absolute
+			width: 65px
+			height: 32px
+			right: 0
+			top: 50px
+			border-radius: 4px 0px 0px 4px
+			background: rgba(253,253,253,.4)
+			-webkit-backdrop-filter: blur(2px)
+			backdrop-filter: blur(2px)
+			padding: 4px 8px 4px 36px
+			background-image: url(../icons/popular/star1.svg)
+			background-repeat: no-repeat
+			background-position: 8px			
+		.lake		
+			background: url('../img/popular/lake.png') center center/cover no-repeat		
+				
+		.mountains
+			background: url('../img/popular/mountains.png') center center/cover no-repeat
+		.yoga
+			background: url('../img/popular/yoga.png') center center/cover no-repeat
+		&_img
+			height: 410px
+			width: 100%
+		a
+			text-decoration: none
+		
+			
+				
+			&__btn
+				// position: absolute
+				// transition: transform  .3s ease-in-out
+				// opacity: 0
+				// bottom: 20px			
+		.hover			
+			
+			// overflow: hidden
+			// transform: translateZ(0)
+			// backface-visibility: hidden
+			
+	
+		                 
+	&__btn
+		&_wrapper
+			margin-top: 50px
+			display: flex            
+			justify-content: center
+

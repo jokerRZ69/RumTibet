@@ -1,0 +1,488 @@
+@media (max-width: 1439px)
+	.container
+		max-width: 1240px
+			// .footer
+			// 	&__actual
+		.footer
+			&__detailed
+				margin: 0 10px					   
+			
+@media (max-width: 1200px)
+	.container
+		max-width: 960px
+	.promo
+		header
+			nav			
+				.wrapper_menu			
+					.menu				
+						padding-left: 0
+						&_item
+							font-size: 16px
+							padding-right: 24px	
+							&:last-child
+								padding-right: 0
+		&_header
+			margin-top: 300px
+			font-size: 35px
+		&__form
+			grid-template-columns: repeat(3,200px) auto
+		.form_btn
+			width: 200px				
+	.hiking //************hiking****************//
+		padding-bottom: 40px
+		&__about
+			gap: 0
+			min-height: auto
+			&_item
+				&_img
+					.wrapper_img1				
+						display: none
+					.wrapper_img2
+						position: relative
+						grid-column: 1/3
+						grid-row: 1/3
+
+	.offers  //****offers********************//
+		&__our
+			column-gap: 10px
+			grid-template-columns: repeat(2,auto)
+			.offers__our_iteml_btn
+				width: 200px
+	.blog	//***********************section Blog//
+		&__title
+			text-align: left
+			font-size: 16px
+			span
+				font-size: 24px
+		&__items
+			grid-template-columns: repeat(4,285px)
+			grid-auto-columns: 285px
+			grid-template-rows: 495px
+			grid-auto-flow: column
+			// overflow-y: visible 
+			overflow-x: scroll
+			overflow-y: clip
+		&__item
+			padding: 0
+			border-radius: 10px
+			grid-template-columns: 285px
+			grid-template-rows: 280px 215px
+			row-gap: 16px
+			box-sizing: border-box
+			
+			&_img
+				border-radius: 10px 10px 0 0
+				img
+					border-radius: 10px 10px 0 0			
+			&_dscr
+				padding: 0 16px 16px 16px
+				border-radius: 0 0 10px 10px  
+				row-gap: 16px
+				grid-template-rows: repeat(2,auto) 30px
+				
+				&-header
+					font-size: 20px
+					line-height: 26px
+				&-subheader
+					font-size: 14px
+					overflow: hidden				
+					display: -webkit-box
+					-webkit-line-clamp: 4
+					-webkit-box-orient: vertical
+					
+				&-search
+					border-radius: 0 0 10px 10px  
+	.report //*****************section Report//
+		&__title
+			text-align: left
+			font-size: 16px
+			span
+				font-size: 24px	
+		&__photos
+			grid-template-columns: repeat(6,280px)
+			grid-template-rows: 250px
+			overflow-x: scroll
+			overflow-y: clip
+			&_balls
+				border-radius: 6px
+				grid-column: auto
+				grid-row: auto				
+			&_map
+				border-radius: 6px
+				grid-column: 2/3
+				// grid-row: 1/2			
+			&_emirates
+				grid-column: 3/4
+				grid-row: 1/2			
+			&_beach				
+				grid-column: 4/5	
+				grid-row: 1/2		
+			&_canyon
+				grid-column: 5/6
+				grid-row: 1/2			
+			&_notepad
+				grid-column: 6/7
+				grid-row: 1/2
+			img
+				border-radius: 6px	
+			a
+				transition: transform 1s
+				&:hover
+					border-radius: 8px					
+					border: 1px solid $highlighting-in-yellow				
+					transform: scale(1.15)  
+
+	.footer
+		&__detailed
+			padding: 0 10px
+			grid-template-columns: repeat(3,auto)
+			column-gap: 10px						
+			
+			&_services				
+				// &-select
+				// 	li
+				// 		&:nth-last-child(2)
+				// 			&::after
+				// 				display: none
+			&_important
+				margin-left: 50px
+		&__actual
+			&-wrapper				
+				margin: 0
+				padding: 15px
+				grid-template-columns: auto
+				grid-template-rows: 50px auto				
+			&-title					
+				font-size: 18px					
+				span						
+					font-size: 20px
+					br						
+						display: none
+			&-form
+				grid-template-columns: auto
+				grid-template-rows: repeat(2,auto)
+			&-email_btn
+				justify-content: space-between
+				grid-template-columns: 280px 226px
+				.footer__actual-btn
+					width: 226px
+@media (max-width: 992px)
+	.container
+			max-width: 720px
+			position: relative		
+	.promo		
+		header
+			nav
+				position: relative
+				.menu_mobile					
+					width: 100%
+					height: 100vh
+					padding: 50px 16px 45px
+					background-color: rgba(26, 62, 62, 1)
+					transition: .6s all
+					position: fixed
+					inset: 0										
+					z-index: 2				
+					.menu
+						display: grid
+						grid-template-rows: repeat(5,auto)
+						gap: 16px
+						list-style-type: none
+						&_item
+							position: relative
+							padding-left: 14px							
+							font-size: 14px
+							font-weight: 400
+							line-height: 18px
+
+
+
+							&::before
+								content: ''
+								position: absolute
+								border-right: 1px solid rgba(253, 253, 253, 1)
+								border-bottom: 1px solid rgba(253, 253, 253, 1)
+								width: 6px
+								height: 6px
+								top: 9px
+								left: 0
+								transform: translateY(-50%) rotate(-45deg)
+							&:hover		
+								&::before							
+									border-right: 1px solid  $highlighting-in-yellow
+									border-bottom: 1px solid  $highlighting-in-yellow
+							&:first-of-type
+								display: none
+							a
+								color: #FDFDFD
+								&:hover
+									color: $highlighting-in-yellow	
+				.menu_active					
+					display: block
+						
+				.wrapper_menu
+					
+					position: relative					
+					.menu
+						display: none
+					// 	position: fixed
+					// 	flex-direction: column
+					// 	justify-content: start
+					// 	align-items: flex-start
+					// 	gap: 16px
+					// 	top: 0
+					// 	left: -100%
+					// 	width: 100%
+					// 	height: 100vh
+					// 	padding: 45px 16px 50px
+					// 	background-color: rgba(26, 62, 62, 0.9)
+					// 	transition: .6s all
+					// 	&_item
+					// 		position: relative
+					// 		padding-bottom: 20px
+					// 		padding-left: 20px						
+					// 		text-align: left
+					// 		&::before
+					// 			content: ''
+					// 			position: absolute
+					// 			border-right: 2px solid rgba(253, 253, 253, 1)
+					// 			border-bottom: 2px solid rgba(253, 253, 253, 1)
+					// 			width: 6px
+					// 			height: 6px
+					// 			top: 9px
+					// 			left: 0
+					// 			transform: translateY(-50%) rotate(-45deg)
+					// 		&:hover		
+					// 			&::before							
+					// 					border-right: 2px solid  $highlighting-in-yellow
+					// 					border-bottom: 2px solid  $highlighting-in-yellow
+					// 		&:first-of-type
+					// 			display: none			
+					// 	li
+					// 		a
+					// 			&:hover
+					// 				color: $highlighting-in-yellow
+					// 				text-decoration: underline			
+					// 	&_active
+					// 		display: flex
+					// 		inset: 0
+					// 		left: 0						
+					// 		z-index: 5				
+
+					.little_btn
+						display: none							
+					.wrapper				
+						display: block
+						z-index: 10
+						// position: fixed
+						// .hamburger
+						// 	position: fixed
+				
+		&_header
+			margin-top: 100px
+			font-size: 35px
+		&__form
+			grid-template-columns: repeat(3,200px)
+			grid-template-rows: repeat(3, auto)
+			.item1
+				grid-column: 1/2
+				grid-row: 2/3
+			.item2
+				grid-column: 2/3
+				grid-row: 2/3
+			.item3
+				grid-column: 3/4
+				grid-row: 2/3
+	.hiking //************hiking****************//
+		&__about
+			grid-template-columns: 1fr
+			justify-items: center
+			row-gap: 40px			
+			&_item
+				&_img					
+					grid-row: 2/3
+				&_dscr
+					padding-top: 0
+					justify-items: center		
+	.offers  //****offers********************//
+		&__our
+			column-gap: 10px
+			grid-template-columns: auto
+			justify-items: center
+			&_item
+				display: none
+				// foote*****************************
+	.report
+		padding-bottom: 270px			
+	.footer
+		&__actual
+			top: -50%
+			&-email-form
+				justify-content: space-between
+
+			// &-wrapper
+			// 	margin: 0
+			// 	padding: 24px
+			// 	grid-template-columns: auto
+			// 	grid-template-rows: 50px auto
+			&-title
+				font-size: 16px
+				span
+					font-size: 16px
+					br
+						display: none		
+			&-form
+				grid-template-columns: auto
+				grid-template-rows: repeat(2,auto)
+			&-email_btn				
+				.footer__actual-btn
+					width: 226px
+		&__detailed
+			grid-template-columns: auto
+			row-gap: 50px
+			margin: 0	
+
+@media (max-width: 776px)
+	.container			
+			max-width: 540px
+	.promo		
+		&_header
+			margin-top: 150px			
+			font-size: 30px
+		&__form
+			grid-template-columns: repeat(2,200px)
+			grid-template-rows: repeat(3, auto)
+			.item1
+				grid-column: 1/2
+				grid-row: 2/3
+			.item2
+				grid-column: 2/3
+				grid-row: 2/3
+			.item3
+				grid-column: 1/2
+				grid-row: 5/6
+	.hiking //************hiking****************//
+		padding-top: 50px				
+		&__about
+			min-height: auto
+			grid-template-columns: auto
+			grid-template-rows: repeat(2, auto)
+			.item_img
+				margin-top: 40px
+				grid-row: 2/3
+				&::before
+					display: none
+				.img1
+					display: none
+				.img2
+					display: block
+					position: relative					
+					top: 0
+					left: 0
+			&_item
+				padding-top: 0
+				justify-items: center
+				grid-row: 1/2
+				&_title
+					font-size: 16px
+					span
+						font-size: 24px
+				&_dscr
+					font-size: 16px			
+			.item_dscr
+				display: flex
+				flex-direction: column
+				align-items: center
+	.offers  //****offers********************//
+		&__our			
+			grid-template-columns: auto			
+			&_iteml
+				justify-items: center
+	.report
+		padding-bottom: 340px
+	.footer
+		padding-top: 50px
+		&__actual
+			top: -45%
+			&-wrapper
+				grid-template-rows: repeat(5,auto) 
+			&-form
+				margin-top: 18px
+				display: block
+				button
+					margin-top: 16px
+			&-email_btn
+				display: block
+			.conditions
+				margin-top: 24px
+		&__politics
+			.wrapper
+				flex-direction: column														
+@media (max-width: 576px)
+	.container
+			margin: 0 16px
+			max-width: 100%
+	.promo		
+		header
+			nav
+				.wrapper_menu
+					display: grid
+					grid-template-columns: repeat(2,auto)						
+		&_header
+			margin-top: 298px			
+			font-size: 28px
+			line-height: 42px
+		&__form
+			padding: 0
+			grid-template-columns: auto
+			gap: 0
+			&_select
+				display: none
+			label
+				display: none		
+		.wrapper_form			
+			background-color: transparent			
+			.form_btn				
+				margin-top: 32px
+	.hiking //************hiking****************//
+		padding-top: 0
+		&__about		
+			grid-template-rows: repeat(2, auto)
+			&_item
+				&_dscr
+					padding-top: 40px
+					/*section Popular****************/
+	.popular
+		padding-top: 50px
+		&__title
+			font-size: 14px
+			text-align: left
+			span
+				font-size: 24px
+		&__wrapper
+			margin-top: 35px
+			grid-template-columns: repeat(3,258px)
+			&_item
+				width: 258px
+				.price					
+					column-gap: 0
+					padding: 14px					
+					&__title
+						font-size: 18px
+						span
+							display: none
+					&__price
+						padding: 6px 12px
+						font-size: 16px	
+				.dscr
+					text-overflow: ellipsis
+	.report
+		padding-bottom: 410px				
+	.footer
+		&__actual
+			top: -50%
+		&__detailed
+
+			&_important, &_services
+				margin-left: 0	
+		

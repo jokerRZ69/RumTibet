@@ -1,0 +1,45 @@
+.select 
+	
+	.is-active .select__body
+		display: block
+	
+	&__header 		
+		cursor: pointer
+		display: flex
+		align-items: center
+	
+	&__current 
+		font-size: 18px
+		line-height: 24px
+		padding: 8px
+	
+	&__icon 
+		align-items: center
+		display: flex
+		flex-shrink: 0
+		justify-content: center
+		height: 40px
+		margin-left: auto
+		text-align: center
+		width: 40px
+	
+	&__body
+		background-color: rgba(255, 255, 255, 0.2)
+		border: 1px solid rgba(253, 253, 253, 1) 		
+		border-top: 0
+		display: none 
+		left: 0
+		position: absolute
+		right: 0
+		top: 100%
+		// &.is-active 
+		// 	display: block
+	
+	&__item 
+		cursor: pointer
+		font-size: 16px		
+		padding: 8px
+		&:hover 
+			background-color: $highlighting-in-yellow
+		
+	

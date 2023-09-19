@@ -1,0 +1,51 @@
+.wrapper
+	display: none
+	// position: absolute
+	// top: 33px
+	// right: 33px
+	.hamburger
+		width: 30px
+		height: 30px			
+		display: flex
+		align-self: center
+		flex-direction: column
+		justify-content: space-between	
+		cursor: pointer
+		position: fixed
+		top: 33px
+		right: 33px
+
+
+		div
+			align-self: flex-end
+			height: 3px
+			width: 100%
+			border-radius: 10px
+			background: #fff
+
+		.meat
+			// width: 75%
+			margin-top: 3px
+			transition: all 200ms ease-in-out
+
+		.bottom-bun
+			width: 50%
+			margin-top: 3px
+			transition: all 400ms ease-in-out
+
+		&:hover
+			div
+				background-color: $highlighting-in-yellow		
+
+
+	.hamburger_active		
+		.top-bun
+			transform: translateY(10px) rotate(-45deg)	
+		.meat 
+			display: none
+		.bottom-bun
+			width: 100%
+			transform: translateY(-16px) rotate(45deg)
+		
+		
+
