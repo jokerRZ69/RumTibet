@@ -48,3 +48,15 @@ const img2Element = document.querySelector('.img2');
    };
 
 // *******************************************************************************************
+// popular*********************************************************
+// const wrapper = document.querySelectorAll('.popular__wrapper_items');
+// const on = document.querySelector('.item__on');
+const dscr = document.querySelectorAll('.item__dscr');
+const start = document.querySelector('.popular__wrapper_star');
+
+
+
+dscr.forEach(el => el.addEventListener('click', function(e) {
+    this.classList.toggle('item__dscr-active');
+    start.classList.toggle('active');
+}))
