@@ -49,14 +49,16 @@ const img2Element = document.querySelector('.img2');
 
 // *******************************************************************************************
 // popular*********************************************************
-// const wrapper = document.querySelectorAll('.popular__wrapper_items');
-// const on = document.querySelector('.item__on');
-const dscr = document.querySelectorAll('.item__dscr');
-const start = document.querySelector('.popular__wrapper_star');
 
+const dscrs  = document.querySelectorAll('.item__wrapper');
 
+const ratings = document.querySelectorAll('.rating');
 
-dscr.forEach(el => el.addEventListener('click', function(e) {
-    this.classList.toggle('item__dscr-active');
-    start.classList.toggle('active');
-}))
+dscrs.forEach((wrapper) => {
+        let dscr = wrapper.querySelector('.item__dscr');
+        let rating = wrapper.querySelector('.rating');
+        dscr.addEventListener('click', function(e) {
+            dscr.classList.toggle('item__dscr-active');
+            rating.classList.toggle('active');
+})
+})
