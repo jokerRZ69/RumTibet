@@ -44,8 +44,7 @@ const img2Element = document.querySelector('.img2');
         img1Element.setAttribute("alt", 'house and mountains in the background'); 
         
     }
-    // return imgToogle;
-   };
+     };
 
 // *******************************************************************************************
 // popular*********************************************************
